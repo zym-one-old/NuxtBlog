@@ -1,0 +1,44 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "My phenomenal Nuxt.js project",
+  "author": "yiming-zeng",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "build": "nuxt build",
+    "start": "cross-env NODE_ENV=production node server/index.js",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "@koa/cors": "^3.0.0",
+    "@nuxtjs/axios": "^5.3.6",
+    "cross-env": "^5.2.0",
+    "degit": "^2.8.0",
+    "front-matter": "^3.1.0",
+    "highlight.js": "^9.18.1",
+    "koa": "^2.6.2",
+    "koa-body": "^4.1.1",
+    "koa-router": "^8.0.8",
+    "lodash": "^4.17.15",
+    "marked": "^0.8.0",
+    "nuxt": "^2.0.0",
+    "octicons": "^8.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9",
+    "@nuxtjs/tailwindcss": "^1.0.0",
+    "@nuxtjs/eslint-config": "^2.0.0",
+    "@nuxtjs/eslint-module": "^1.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^6.1.0",
+    "eslint-plugin-nuxt": ">=0.4.2"
+  },
+  "config": {
+    "nuxt": {
+      "host": "0.0.0.0",
+      "port": 80
+    }
+  }
+}
