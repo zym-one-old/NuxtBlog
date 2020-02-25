@@ -17,7 +17,7 @@
       <!-- lg:list-disc  lg:ml-4 -->
       <ul class="">
         <li v-for="(item2,index2) in $store.state.posts.folder.posts" :key="index2">
-          <div class="py-2 px-6 flex flex-col lg:flex-row lg:justify-between">
+          <div class="my-2 px-6 flex flex-col lg:flex-row lg:justify-between">
             <nuxt-link :to="'/posts/'+$route.params.slug +'/'+item2.name" class="text-gray-700 flex justify-center font-bold hover:text-nuxt-stress text-sm">
               {{ item2.title }}
             </nuxt-link>

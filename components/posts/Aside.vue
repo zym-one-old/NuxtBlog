@@ -25,7 +25,7 @@
           >
             <span class="flex-auto flex flex-row items-center break-words">
               <icon-stack class="mr-4" />
-              <span v-if="$store.state.posts.folder" class="font-medium">
+              <span v-if="$route.params.slug" class="font-medium">
                 {{ $store.state.posts.folder.title }}
               </span>
               <span v-else class="font-medium">

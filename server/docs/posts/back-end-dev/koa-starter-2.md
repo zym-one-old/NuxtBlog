@@ -1,0 +1,3 @@
+应用拆分
+
+在app目录下包括了entity、controller和service三个部分
