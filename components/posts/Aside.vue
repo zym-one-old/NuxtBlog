@@ -25,8 +25,11 @@
           >
             <span class="flex-auto flex flex-row items-center break-words">
               <icon-stack class="mr-4" />
-              <span class="font-medium">
-                {{ $route.params.slug || "归档" }}
+              <span v-if="$store.state.posts.folder" class="font-medium">
+                {{ $store.state.posts.folder.title }}
+              </span>
+              <span v-else class="font-medium">
+                {{ "归档" }}
               </span>
             </span>
             <span

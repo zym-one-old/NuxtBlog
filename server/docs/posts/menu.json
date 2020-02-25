@@ -1,20 +1,14 @@
 [
   {
-    "name": "js",
-    "title": "js",
-    "discription": "",
+    "name": "websiteConstruction",
+    "title": "建站记录",
+    "discription": ["记录网站建设中用到的一些技术、流程与方法"],
     "posts": [
       {
-        "title": "中文名称",
-        "name": "20120121_async-data",
-        "discription": "",
-        "date": "20120121"
-      },
-      {
-        "title": "commands",
-        "name": "20130203_commands",
-        "discription": "",
-        "date": "20130203"
+        "title": "阿里云部署Nuxt.js项目",
+        "name": "aliyunDeploy",
+        "discription": "阿里云部署Nuxt.js项目",
+        "date": "20200223"
       }
     ]
   }

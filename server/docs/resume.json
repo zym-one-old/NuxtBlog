@@ -1,14 +1,14 @@
 {
   "name": "曾一鸣",
-  "identity": "GIS开发者",
-  "summery": ["曾一鸣现在是一名专注于 iOS 的职业开发者。他拥有对于 Swift，Objective-C 以及网络程序设计方面的深厚知识及多年实践经验。他将这些技术运用于创建应用程序和通用框架等解决方案，其中很多都被用户喜爱，并被开发者来构建其他软件。同时，他是 ObjC 中国组织的发起人和领导者，为将最佳 iOS 实践和进阶技术引入中国而不断努力。","此外，作为一个学士。"],
-  "interests": ["WebGIS"],
+  "identity": "",
+  "summery": ["97年生、19年大学毕业，喜欢折腾的年轻人","标准宅男的懒汉，但又总是对各种新奇事物与技术有着无穷的探索欲"],
+  "interests": ["WebGIS","前端技术","音乐、游戏、鬼畜..."],
   "education": {
     "info": "地理国情监测，工学学士学位，2019",
     "school": "武汉大学 # 遥感信息工程学院"
   },
   "github": "https://github.com/yiming-zeng",
-  "weibo": "https://weibo.com/u/7366187178",
+  "weibo-no": "https://weibo.com/u/7366187178",
   "bilibili": "https://space.bilibili.com/474757039",
   "mail": "yiming.zeng97@gmail.com"
 }

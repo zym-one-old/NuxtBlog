@@ -1,9 +1,16 @@
 <template>
   <div class="px-6 lg:px-0 mx-auto lg:mx-20 flex flex-col" onselectstart="return false" style="max-width:750px;">
     <span class="mt-8 mb-6 text-lg text-center lg:text-left font-bold uppercase">
-      - {{ $route.params.slug }} -
+      - {{ $store.state.posts.folder.title }} -
     </span>
-    <div class="my-6 flex flex-col">
+    <article>
+      <blockquote>
+        <p v-for="(item,index) in $store.state.posts.folder.discription" :key="index">
+          {{ item }}
+        </p>
+      </blockquote>
+    </article>
+    <div class="mb-6 flex flex-col">
       <!-- <span class="font-mono font-bold text-gray-700 text-lg text-center lg:text-left">
         {{ $store.state.posts.folder.title }}
       </span> -->
