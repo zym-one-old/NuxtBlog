@@ -7,8 +7,14 @@
       {
         "title": "Koa服务端开发(0)-环境搭建",
         "name": "koa-starter-0",
-        "discription": "Koa服务端开发起手式-环境搭建",
+        "discription": "Koa服务端开发-环境搭建",
         "date": "20200225"
+      },
+      {
+        "title": "Koa服务端开发(1)-项目配置",
+        "name": "koa-starter-1",
+        "discription": "Koa服务端开发-项目配置",
+        "date": "20200228"
       }
     ]
   },
