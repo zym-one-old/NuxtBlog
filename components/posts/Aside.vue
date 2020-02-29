@@ -18,7 +18,7 @@
             <icon-direction />
           </button>
         </div>
-        <div v-if="isPostsPath" class="ml-4 md:ml-6" :class="{ 'pb-6 border-b': menuOpen }">
+        <div v-if="isPostsPath" class="ml-4 md:ml-6" :class="{ 'border-b': menuOpen }">
           <div
             class="px-3 py-2 flex items-center cursor-pointer hover:bg-gray-300 border-b"
             @click="menuOpen = !menuOpen"
@@ -40,11 +40,11 @@
               <icon-arrow />
             </span>
           </div>
-          <div v-if="menuOpen" class="">
+          <div v-if="menuOpen" class="py-3">
             <div
               v-for="(folder, index) in $store.state.posts.menu"
               :key="index"
-              class="folderItem"
+              class="folderItem hover:text-nuxt-stress"
             >
               <nuxt-link
                 :to="'/posts/' + folder.name"
@@ -58,7 +58,7 @@
                 </span>
               </nuxt-link>
             </div>
-            <div class="folderItem">
+            <div class="folderItem hover:text-nuxt-stress">
               <nuxt-link
                 :to="'/posts/archive'"
                 class="py-2 cursor-pointer flex items-center hover:bg-gray-300"
@@ -86,7 +86,7 @@
             >
               <nuxt-link
                 :to="'/posts/' + $route.params.slug + '/' + file.name"
-                class="px-3 py-2 cursor-pointer flex items-center hover:bg-gray-300"
+                class="px-3 py-2 cursor-pointer flex items-center hover:bg-gray-300  hover:text-nuxt-stress"
                 draggable="false"
                 exact
               >
@@ -189,6 +189,7 @@ export default {
 
 .folderItem a.nuxt-link-active span {
   @apply border-nuxt-stress;
+  @apply text-nuxt-stress;
 }
 
 .asideFooter:before {

@@ -8,7 +8,7 @@
         {{ formate(item.time)+ ' x ' +item.posts.length }}
       </span>
       <!-- lg:list-disc  lg:ml-4 -->
-      <ul class="">
+      <ul class="py-1">
         <li v-for="(item2,index2) in item.posts" :key="index2">
           <div class="my-2 px-6 flex flex-col lg:flex-row lg:justify-between">
             <nuxt-link :to="'/posts/'+item2.folder.name +'/'+item2.name" class="text-gray-700 flex justify-center items-center font-bold hover:text-nuxt-stress text-sm">

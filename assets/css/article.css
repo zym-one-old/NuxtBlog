@@ -52,8 +52,8 @@ article pre {
 }
 article pre code {
   border-radius: 3px;
-  margin: 28px 0px;
-  padding: 24px 24px 24px 8px !important;
+  margin: 14px 0px;
+  padding: 20px 20px 20px 8px !important;
   font-family: "Source Code Pro", Consolas, Menlo, Monaco, Courier, monospace;
   display: block;
   hyphens: none;

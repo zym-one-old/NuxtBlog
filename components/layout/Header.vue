@@ -36,7 +36,7 @@
               <div
                 class="font-extrabold text-lg uppercase whitespace-no-wrap"
               >
-                ZYM-ONE
+                每日技术记录-ONE
               </div>
             </a>
           </div>
