@@ -44,12 +44,13 @@ const { marked } = require('../utils/renderer')
 
 const updateRepo = async (ctx, next) => {
   if (fs.existsSync(ctx.docsDir)) {
-    delDir(ctx.docsDir)
+    await delDir(ctx.docsDir)
     consola.info(`Docdir ${ctx.docsDir} Deleted`)
   }
 
   consola.info(`Cloning ${ctx.repo} into ${ctx.docsDir}`)
-  await degit(ctx.repo, { force: true, cache: false }).clone(ctx.docsDir)
+  await degit(ctx.repo, { force: true, cache: true, verbose: true }).clone(ctx.docsDir)
+  consola.info(`Docdir ${ctx.docsDir} Cloned`)
 
   return (ctx.body = {
     ret: 200,
