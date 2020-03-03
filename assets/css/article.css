@@ -155,9 +155,14 @@ article code {
   box-decoration-break: clone;
 }
 
-article a:link {
-  color: #1841ce;
+article a {
+  /* color: #1841ce !important; */
+  @apply text-nuxt-stress;
 }
+
+/* article a:link {
+  @apply text-nuxt-stress;
+} */
 
 article .Alert.Alert--orange {
   @apply bg-orange-100;

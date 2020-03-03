@@ -49,7 +49,7 @@ const updateRepo = async (ctx, next) => {
   }
 
   consola.info(`Cloning ${ctx.repo} into ${ctx.docsDir}`)
-  await degit(ctx.repo, { force: true, cache: true, verbose: true }).clone(ctx.docsDir)
+  await degit(ctx.repo, { force: true, cache: false }).clone(ctx.docsDir)
   consola.info(`Docdir ${ctx.docsDir} Cloned`)
 
   return (ctx.body = {
