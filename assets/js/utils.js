@@ -6,3 +6,23 @@ export function formateDate (date) {
     return d.toDateString()
   }
 }
+
+export function clone (Obj) {
+  let buf
+  if (Array.isArray(Obj)) {
+    buf = []
+    let i = Obj.length
+    while (i--) {
+      buf[i] = clone(Obj[i])
+    }
+    return buf
+  } else if (Obj instanceof Object) {
+    buf = {}
+    for (const k in Obj) {
+      buf[k] = clone(Obj[k])
+    }
+    return buf
+  } else {
+    return Obj
+  }
+}

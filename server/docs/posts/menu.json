@@ -34,6 +34,44 @@
         "name": "aliyun-deploy",
         "discription": "阿里云部署Nuxt.js项目",
         "date": "20200223"
+      },
+      {
+        "title": "nginx基本使用",
+        "name": "nginx-basic-usage",
+        "discription": "nginx基本使用",
+        "date": "20200313"
+      }
+    ]
+  },
+  {
+    "name": "data-n-visualization",
+    "title": "数据与可视化",
+    "discription": ["探究数据与视觉表现形式"],
+    "posts": [
+      {
+        "title": "GeoJSON & TopoJSON",
+        "name": "GeoJSON-n-TopoJSON",
+        "discription": "GeoJSON & TopoJSON",
+        "date": "20200303"
+      },
+      {
+        "title": "D3.js与地图可视化",
+        "name": "d3js-geo",
+        "discription": "D3.js与地图应用",
+        "date": "20200305"
+      }
+    ]
+  },
+  {
+    "name": "miscellany",
+    "title": "杂记",
+    "discription": ["记载杂项的笔记、风景、琐事和感想"],
+    "posts": [
+      {
+        "title": "一道猫吃老鼠的编程题",
+        "name": "mouse10",
+        "discription": "一道猫吃老鼠的编程题",
+        "date": "20200314"
       }
     ]
   }

@@ -1,6 +1,9 @@
 <template>
   <div class="flex flex-row relative min-w-0">
-    <div class="pageContainer px-6 pb-16 mx-auto lg:px-0 lg:mx-20 flex flex-col flex-auto overflow-auto" style="max-width: 750px;">
+    <div
+      class="pageContainer px-6 pb-10 mx-auto lg:px-0 lg:mx-20 flex flex-col flex-auto overflow-auto"
+      style="max-width: 750px;"
+    >
       <!--  -->
       <div class="mb-8 border-b-2 border-nuxt-gray">
         <div class="flex py-10 md:items-baseline flex-row">
@@ -13,7 +16,17 @@
               </h1>
             </div>
             <div class="mt-2 flex items-center xl:hidden">
-              <a class="flex items-center justify-center h-8 w-8 p-2 text-nuxt-mono hover:text-nuxt-stress" target="_blank" rel="noopener noreferrer" draggable="false" :href="$store.state.posts.repo+'/tree/master/'+$store.state.posts.filePath">
+              <a
+                class="flex items-center justify-center h-8 w-8 p-2 text-nuxt-mono hover:text-nuxt-stress"
+                target="_blank"
+                rel="noopener noreferrer"
+                draggable="false"
+                :href="
+                  $store.state.posts.repo +
+                    '/tree/master/' +
+                    $store.state.posts.filePath
+                "
+              >
                 <icon-github />
               </a>
               <!-- <button class="flex items-center justify-center h-8 w-8 p-2 outline-none focus:outline-none text-nuxt-mono hover:text-nuxt-stress">
@@ -27,6 +40,28 @@
         </div>
       </div>
       <!--  -->
+      <div v-if="page.attrs.github || page.attrs.preview" class="w-full flex flex-row pb-2">
+        <a
+          v-if="page.attrs.github"
+          class="flex items-center justify-center h-8 p-2 text-nuxt-stress"
+          target="_blank"
+          rel="noopener noreferrer"
+          draggable="false"
+          :href="page.attrs.github"
+        >
+          GitHub地址
+        </a>
+        <a
+          v-if="page.attrs.preview"
+          class="flex items-center justify-center h-8 p-2 text-nuxt-stress"
+          target="_blank"
+          rel="noopener noreferrer"
+          draggable="false"
+          :href="page.attrs.preview"
+        >
+          在线预览地址
+        </a>
+      </div>
       <HtmlParser :content="page.body" />
       <page-footer />
       <!-- <Footer class="h-12" /> -->
@@ -50,7 +85,9 @@ export default {
     // Footer
   },
   fetch ({ store: { state, commit }, params }) {
-    const file = state.posts.folder.posts.filter((e) => { return e.name === params.file })
+    const file = state.posts.folder.posts.filter((e) => {
+      return e.name === params.file
+    })
     if (file.length > 0) {
       commit('posts/setFile', file[0])
     }
@@ -63,6 +100,7 @@ export default {
     const data = {
       page: res.data
     }
+    // console.log(res.data) // eslint-disable-line
     return data
   },
   validate ({ params, store: { state } }) {
@@ -74,7 +112,11 @@ export default {
       title: this.$store.state.posts.file.title,
       titleTemplate: '%s - ZYMONE',
       meta: [
-        { hid: 'description', name: 'description', content: this.$store.state.posts.file.description }
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.$store.state.posts.file.description
+        }
       ]
     }
   }

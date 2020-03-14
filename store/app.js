@@ -2,7 +2,7 @@ export const state = () => ({
   aside: false,
   fullScreen: false,
   // menu: [{ name: 'posts', title: 'Posts' }, { name: 'about', title: 'About' }]
-  menu: [{ name: 'posts', title: 'Posts' }]
+  menu: [{ name: 'posts', title: 'Posts' }, { name: 'projects', title: 'Projects' }]
 })
 
 export const mutations = {

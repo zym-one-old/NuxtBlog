@@ -72,7 +72,7 @@ id: number;
 ```
 
 可自动更新的日期型属性
-```
+```typescript
 // 创建时间
 @CreateDateColumn() 
 created_at: Date
@@ -84,7 +84,7 @@ updated_at: Date
 
 通过 `@JoinColumn` 装饰器指定关系的拥有者，`@JoinColumn` 只能在关系的一边使用来使这边做为关系的拥有者，关系拥有者在数据库里的表现就是拥有一个外键列。
 
-```
+```typescript
 // 一对一关系
 import { A } from "./a";
 @Entity()
@@ -108,7 +108,7 @@ export class A {
 ### 实体验证
 
 借助 `class-validator` 的修饰符完成实体的验证，常用到的如下
-```
+```typescript
 // 数据类型验证
 @IsString()
 @IsBoolean()

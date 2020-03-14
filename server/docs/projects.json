@@ -1,0 +1,10 @@
+[
+    {
+        "name":"vue-d3-geo",
+        "title":"vue-d3-geo",
+        "post":"posts/data-n-visualization/d3js-geo",
+        "github":"https://github.com/yiming-zeng/vue-d3-geo",
+        "discriptions":"一个使用vue和d3.js制作的地图投影可视化应用",
+        "image":"/image/vue-d3-geo.JPG"
+    }
+]

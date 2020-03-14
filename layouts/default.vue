@@ -1,5 +1,9 @@
 <template>
-  <div class="min-h-screen w-screen overflow-x-hidden m-0 p-0 flex flex-col bg">
+  <div
+    class="min-h-screen w-full overflow-x-hidden m-0 p-0 flex flex-col"
+    :class="{'bg':$route.path.indexOf('about')>0}"
+    style="background:#f5f7f9;"
+  >
     <Header />
     <Backdrop
       :value="$store.state.app.aside"

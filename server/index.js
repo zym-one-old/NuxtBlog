@@ -4,6 +4,7 @@ const Koa = require('koa')
 const { Nuxt, Builder } = require('nuxt')
 const Router = require('koa-router')
 const koaBody = require('koa-body')
+const koaStatic = require('koa-static')
 const cors = require('@koa/cors')
 const consola = require('consola')
 const degit = require('degit') // makes copies of git repositories
@@ -43,6 +44,7 @@ async function start () {
 
   app.use(cors())
   app.use(koaBody())
+  app.use(koaStatic(join(__dirname, './src')))
 
   const router = new Router()
   router.use('', route.routes())

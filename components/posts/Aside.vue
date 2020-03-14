@@ -14,11 +14,15 @@
       >
         <!--  -->
         <div class="mobileHeader h-16 flex-shrink-0 flex md:hidden">
-          <button class="py-2 px-4 focus:outline-none" style="font-size: 24px;" @click="$store.commit('app/toggleAside')">
+          <button
+            class="py-2 px-4 focus:outline-none"
+            style="font-size: 24px;"
+            @click="$store.commit('app/toggleAside')"
+          >
             <icon-direction />
           </button>
         </div>
-        <div v-if="isPostsPath" class="ml-4 md:ml-6" :class="{ 'border-b': menuOpen }">
+        <div v-if="isPostsPath" class="ml-4 md:ml-6 flex-shrink-0">
           <div
             class="px-3 py-2 flex items-center cursor-pointer hover:bg-gray-300 border-b"
             @click="menuOpen = !menuOpen"
@@ -40,40 +44,46 @@
               <icon-arrow />
             </span>
           </div>
-          <div v-if="menuOpen" class="py-3">
-            <div
-              v-for="(folder, index) in $store.state.posts.menu"
-              :key="index"
-              class="folderItem hover:text-nuxt-stress"
+        </div>
+        <!--  -->
+        <div
+          v-if="menuOpen"
+          class="ml-4 md:ml-6 py-3  overflow-y-auto "
+          :class="{ 'border-b': menuOpen }"
+        >
+          <div
+            v-for="(folder, index) in $store.state.posts.menu"
+            :key="index"
+            class="folderItem hover:text-nuxt-stress"
+          >
+            <nuxt-link
+              :to="'/posts/' + folder.name"
+              class="py-2 cursor-pointer flex items-center hover:bg-gray-300"
+              draggable="false"
             >
-              <nuxt-link
-                :to="'/posts/' + folder.name"
-                class="py-2 cursor-pointer flex items-center hover:bg-gray-300"
-                draggable="false"
+              <span
+                class="px-3 flex-auto break-words font-medium text-sm border-l-4 border-transparent"
               >
-                <span
-                  class="px-3 flex-auto break-words font-medium text-sm border-l-4 border-transparent"
-                >
-                  {{ folder.title }}
-                </span>
-              </nuxt-link>
-            </div>
-            <div class="folderItem hover:text-nuxt-stress">
-              <nuxt-link
-                :to="'/posts/archive'"
-                class="py-2 cursor-pointer flex items-center hover:bg-gray-300"
-                draggable="false"
+                {{ folder.title }}
+              </span>
+            </nuxt-link>
+          </div>
+          <div class="folderItem hover:text-nuxt-stress">
+            <nuxt-link
+              :to="'/posts/archive'"
+              class="py-2 cursor-pointer flex items-center hover:bg-gray-300"
+              draggable="false"
+            >
+              <span
+                class="px-3 flex-auto break-words font-medium text-sm  border-l-4 border-transparent"
               >
-                <span
-                  class="px-3 flex-auto break-words font-medium text-sm  border-l-4 border-transparent"
-                >
-                  归档
-                </span>
-              </nuxt-link>
-            </div>
+                归档
+              </span>
+            </nuxt-link>
           </div>
         </div>
-        <div class="mt-8 pl-4 md:pl-6 h-full overflow-y-auto">
+        <!--  -->
+        <div class="pt-8 pl-4 md:pl-6 overflow-y-auto pb-14 md:pb-20">
           <template v-if="$route.params.slug && $store.state.posts.folder">
             <div
               v-for="(file, index) in $store.state.posts.folder.posts"
@@ -97,7 +107,7 @@
             </div>
           </template>
         </div>
-        <footer class="asideFooter block relative h-14 md:h-20">
+        <footer class="asideFooter block absolute w-full bottom-0 h-14 md:h-20 flex-shrink-0 border-t" style="background:#f5f7f9;">
           <ul class="w-full flex justify-center h-full my-auto">
             <li
               v-for="(item, index) in $store.state.app.menu"
@@ -192,7 +202,7 @@ export default {
   @apply text-nuxt-stress;
 }
 
-.asideFooter:before {
+/* .asideFooter:before {
   background: -webkit-linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0) 0%,
@@ -214,16 +224,16 @@ export default {
     rgba(255, 255, 255, 0) 0%,
     #f5f7f9 100%
   );
-}
+} */
 
 .mobileHeader {
-    color: #74818D;
-    margin: 0;
-    padding: 0;
-    box-shadow: 0 1px 1px 0 rgba(116, 129, 141, 0.1);
-    align-items: stretch;
-    border-bottom: 1px solid #d4dadf;
-    background-color: #FFFFFF;
-    -webkit-box-align: stretch;
+  color: #74818d;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 1px 1px 0 rgba(116, 129, 141, 0.1);
+  align-items: stretch;
+  border-bottom: 1px solid #d4dadf;
+  background-color: #ffffff;
+  -webkit-box-align: stretch;
 }
 </style>
